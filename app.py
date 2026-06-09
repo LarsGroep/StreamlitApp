@@ -21,7 +21,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ── Header ────────────────────────────────────────────────────────────────────
 st.title("XAI type shit")
 
 csv_files = sorted(f.name for f in ARCHIVE_DIR.glob("*.csv"))
@@ -34,21 +33,18 @@ cfg1, cfg2, cfg3 = st.columns(3)
 with cfg1:
     selected_file = st.selectbox("Dataset", csv_files)
 
-
 @st.cache_data
 def load_raw(fname: str) -> pd.DataFrame:
     return pd.read_csv(ARCHIVE_DIR / fname)
 
-
 df_raw = load_raw(selected_file)
-
-# Only numeric columns are valid regression targets
 numeric_target_cols = df_raw.select_dtypes(include=[np.number]).columns.tolist()
 if not numeric_target_cols:
     st.error("Geen kolommen met nummers.")
     st.stop()
 
-DEFAULT_TARGETS = {"song_popularity", "ranking"}
+DEFAULT_TARGETS = {"song_popularity", "ranking", "visitors", "profit", "revenue",
+                   "Total Visitors", "Event Result ACTUALS_clean"}
 default_target  = next((c for c in numeric_target_cols if c in DEFAULT_TARGETS),
                        numeric_target_cols[0])
 
@@ -83,7 +79,6 @@ def vectorize_and_rank(fname: str, target: str):
     def is_junk(col: str, series: pd.Series) -> bool:
         if any(kw in col.lower() for kw in JUNK_KEYWORDS):
             return True
-        # Drop string columns where almost every value is unique (IDs, free text)
         if series.dtype == object:
             n_unique = series.nunique(dropna=True)
             n_total  = series.notna().sum()
@@ -113,14 +108,13 @@ def vectorize_and_rank(fname: str, target: str):
    
     orig_imp: dict[str, float] = defaultdict(float)
     for fname_t, imp in zip(transformed_names, quick.feature_importances_):
-        orig_col = fname_t.split("__")[0]   # skrub uses col__value for encoded cols
+        orig_col = fname_t.split("__")[0]
         orig_imp[orig_col] += float(imp)
 
     ranked_cols = sorted(orig_imp, key=orig_imp.__getitem__, reverse=True)
     ranked_scores = [orig_imp[c] for c in ranked_cols]
 
     return tv, features_df, y, ranked_cols, ranked_scores
-
 
 tv, features_df, y, ranked_cols, ranked_scores = vectorize_and_rank(
     selected_file, target_col
@@ -129,7 +123,6 @@ tv, features_df, y, ranked_cols, ranked_scores = vectorize_and_rank(
 if tv is None:
     st.error(f"Preprocessing failed: {ranked_cols}")
     st.stop()
-
 
 auto_selected = ranked_cols[:n_top]
 
@@ -145,7 +138,6 @@ if not user_selected:
     st.warning("Select at least one feature.")
     st.stop()
 
-# ── Step 3: fit final model on selected features ──────────────────────────────
 @st.cache_resource
 def fit_final(fname: str, target: str, selected: tuple):
     df = pd.read_csv(ARCHIVE_DIR / fname)
@@ -186,13 +178,11 @@ def fit_final(fname: str, target: str, selected: tuple):
     return (model, X_samp, y_samp, shap_vals, base_value,
             r2, rmse, feat_names, labels, int(len(y)))
 
-
 (model, X_samp, y_samp, shap_vals, base_value,
  r2, rmse, feat_names, hover_labels, n_rows) = fit_final(
     selected_file, target_col, tuple(user_selected)
 )
 
-# ── Slider state ──────────────────────────────────────────────────────────────
 state_key = f"sl_{selected_file}_{target_col}_{'_'.join(user_selected)}"
 for f in feat_names:
     if f"w_{state_key}_{f}" not in st.session_state:
@@ -203,7 +193,6 @@ multipliers = np.array(
     dtype=np.float32
 )
 
-# ── Apply multipliers ─────────────────────────────────────────────────────────
 adj_importance = np.abs(shap_vals).mean(axis=0) * multipliers
 y_pred         = model.predict(X_samp * multipliers)
 
@@ -218,7 +207,6 @@ m1.metric("R² (test set)",   f"{r2:.3f}")
 m2.metric("RMSE (test set)", f"{rmse:.2f}")
 m3.metric("Rows used",       f"{n_rows:,}")
 
-# Show feature ranking from the importance pass
 with st.expander("Feature ranking (all columns, auto-scored)"):
     rank_df = pd.DataFrame({
         "Original column": ranked_cols,
@@ -229,7 +217,6 @@ with st.expander("Feature ranking (all columns, auto-scored)"):
 
 st.divider()
 
-# ── Plots ─────────────────────────────────────────────────────────────────────
 col_scatter, col_shap = st.columns([2, 1])
 
 with col_scatter:
@@ -273,7 +260,6 @@ with col_shap:
     )
     st.plotly_chart(fig_shap, use_container_width=True)
 
-# ── Per-sample explanation ────────────────────────────────────────────────────
 with st.expander("Explain a specific sample"):
     idx_pick = st.slider("Sample index", 0, len(y_samp) - 1, 0)
     sv       = shap_vals[idx_pick] * multipliers
@@ -297,7 +283,6 @@ with st.expander("Explain a specific sample"):
 
 st.divider()
 
-# ── Human-in-the-loop sliders ─────────────────────────────────────────────────
 st.subheader("Human-in-the-Loop: Adjust Feature Importance")
 st.caption("1.0 = model default · 0.0 = ignore this feature · 2.0 = double its influence")
 
