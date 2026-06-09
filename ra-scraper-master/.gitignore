@@ -133,3 +133,7 @@ dmypy.json
 *.json
 *.jsonl
 *.DS_Store
+
+# Allow scraped event data for Streamlit demo
+!scraper/EventItem.jsonl
+!scraper/EventLineupItem.jsonl
