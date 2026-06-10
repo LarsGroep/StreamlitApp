@@ -306,7 +306,7 @@ _c1, _c2, _c3 = st.columns([2, 3, 2])
 
 with _c2:
 
-    st.image(str(BASE / "ArmadilloBijLofi.jpeg"), use_container_width=True)
+    st.image(str(BASE / "Armadillo_in_lofi.png"), use_container_width=True)
 
 st.markdown("""
 We hebben meerdere datasets gebruikt voor het maken van een concept van een eindproduct.

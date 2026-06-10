@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm *)",
+      "Bash(rm -rf ra-scraper-master/scraper/.git)",
+      "Bash(git add *)"
+    ]
+  }
+}
