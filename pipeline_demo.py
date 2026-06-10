@@ -746,12 +746,40 @@ st.markdown('<p class="fig-cap">Figuur 3 — SHAP feature importance. Groen = ve
 st.markdown("### Feature gewichten aanpassen")
 
 st.markdown("""
+Hieronder zie je het AI-component dat wij willen gebruiken. Dit is een voorbeeld dat we hebben
+gemaakt op een Spotify-dataset. Deze dataset lijkt qua opbouw sterk op de Chartmetric-data
+die we daadwerkelijk willen gaan gebruiken.
+
+De dataset bevat nummers van de afgelopen 24 jaar met bijbehorende audio-eigenschappen —
+denk aan **loudness** (hoe hard een nummer klinkt), **tempo** (BPM), **danceability**,
+**acousticness**, **year** en meer. Op basis van al die eigenschappen wil het model één
+label voorspellen. In dit voorbeeld is dat **energy**: een getal tussen 0 en 1 dat aangeeft
+hoe intens of energiek een nummer is.
+
+Bij Chartmetric kiezen we straks de meest relevante label — bijvoorbeeld een score die
+aangeeft of een artiest aan het groeien is of niet.
+""")
+
+st.markdown("""
+<div class="callout">
+<b>Ons model voorspelt als volgt, stap voor stap:</b><br><br>
+<b>1. Data inladen</b> — alle nummers worden ingeladen met hun features (loudness, tempo, year, etc.).<br>
+<b>2. Model trainen</b> — XGBoost leert patronen: welke combinatie van features leidt tot een hoge of lage energy-score?
+Het model heeft hiervoor 80% van de data gezien en getest op de overige 20%.<br>
+<b>3. Feature importance berekenen (SHAP)</b> — het model laat zien welke features het zwaarst meewegen.
+In dit voorbeeld blijkt <em>loudness</em> de sterkste voorspeller: harde nummers zijn bijna altijd energiek.<br>
+<b>4. Voorspelling maken</b> — voor elk nummer geeft het model een verwachte energy-waarde.
+De scatter hierboven laat zien hoe dicht die voorspelling bij de werkelijke waarde zit.<br>
+<b>5. Gewichten aanpassen (human-in-the-loop)</b> — via de sliders hieronder kun jij bepalen hoeveel
+invloed elke feature heeft op de voorspelling. Zet een feature op 0.0 en hij wordt volledig genegeerd;
+zet hem op 2.0 en zijn invloed wordt verdubbeld. De grafiek updatet direct mee.
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
 Pas het *gewicht* van elke feature aan: **1.0** = model default · **0.0** = genegeerd · **2.0** = dubbele invloed.
-De scatter updatet live.
-**Voorbeeld:** Techno-artiesten hebben normaal gesproken minder Instagram-volgers dan pop-artiesten —
-zet `ins_followers` lager om dat te corrigeren en zie het effect direct in de grafiek.
-*(Let op: in dit voorbeeld wordt Spotify song-data gebruikt als stand-in; de echte Chartmetric
-artiest-data heeft vergelijkbare features per artiest.)*
+*(In dit voorbeeld wordt Spotify song-data gebruikt als stand-in voor de Chartmetric artiest-data,
+die dezelfde structuur heeft.)*
 """)
 
 state_key = "bill_energy_weights"
