@@ -1,0 +1,16 @@
+[
+  {"username": "solidgrooves",     "show_name": "Solid Grooves Radio",   "framework": "tech_house"},
+  {"username": "circoloco",        "show_name": "Circoloco Radio",        "framework": "tech_house"},
+  {"username": "boilerroom",       "show_name": "Boiler Room",            "framework": "all"},
+  {"username": "NTSRadio",         "show_name": "NTS Radio",              "framework": "all",  "skip_artist_extraction": true},
+  {"username": "fabric",            "show_name": "fabric London",          "framework": "leftfield_house_techno"},
+  {"username": "drumcode",         "show_name": "Drumcode Live",          "framework": "progressive_techno"},
+  {"username": "awakenings",         "show_name": "Awakenings Podcast",  "framework": "progressive_techno"},
+  {"username": "AFTERLIFE",         "show_name": "Afterlife Podcast",      "framework": "melodic"},
+  {"username": "cerclemusic",      "show_name": "Cercle",                 "framework": "melodic"},
+  {"username": "djmag",            "show_name": "DJ Mag",                 "framework": "all"},
+  {"username": "mixmag",           "show_name": "Mixmag Lab",             "framework": "all"},
+  {"username": "BBCRadio1",        "show_name": "BBC Radio 1 Dance",      "framework": "all"},
+  {"username": "DeejayTV",         "show_name": "Deejay TV",              "framework": "tech_house"},
+  {"username": "dgtl",             "show_name": "DGTL Podcast",           "framework": "progressive_techno"}
+]

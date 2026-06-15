@@ -1,0 +1,72 @@
+name: leftfield_house_techno
+genre: Leftfield House & Techno / Experimental / Deconstructed
+
+festivals:
+  - {name: fabric London,          tier: "A+"}
+  - {name: Dekmantel,              tier: "A+"}
+  - {name: Junction 2,             tier: "A+"}
+  - {name: Unsound,                tier: "A+"}
+  - {name: CTM Festival,           tier: "A"}
+  - {name: Berghain / Panorama Bar,tier: "A"}
+  - {name: Mutek,                  tier: "A"}
+  - {name: Bloc Weekend,           tier: "A"}
+  - {name: The Warehouse Project,  tier: "A"}
+  - {name: Tresor Berlin,          tier: "A"}
+  - {name: Worm Rotterdam,         tier: "B"}
+  - {name: Rewire Festival,        tier: "B"}
+
+labels:
+  - {name: Fabric Records,          tier: "A+"}
+  - {name: Rekids,                  tier: "A+"}
+  - {name: Numbers,                 tier: "A+"}
+  - {name: Hemlock Recordings,      tier: "A"}
+  - {name: Whities,                 tier: "A"}
+  - {name: R&S Records,             tier: "A"}
+  - {name: Hypercolour,             tier: "A"}
+  - {name: Ostgut Ton (experimental),tier: "A"}
+  - {name: Visionquest,             tier: "B"}
+  - {name: Aus Music,               tier: "B"}
+
+agencies:
+  - {name: Coda Agency,        tier: "A+", score: 10}
+  - {name: WME,                tier: "A+", score: 10}
+  - {name: Earth Agency,       tier: "A",  score: 8}
+  - {name: Eastern Bloc Booking,tier: "A", score: 8}
+  - {name: Parallax Booking,   tier: "A",  score: 8}
+  - {name: Fabric Talent,      tier: "B",  score: 6}
+  - {name: Lex Records Booking,tier: "B",  score: 6}
+
+media:
+  - {name: RA Exchange,              tier: 1}
+  - {name: Boiler Room,              tier: 1}
+  - {name: fabric Mix Series,        tier: 1}
+  - {name: NTS Radio,                tier: 2}
+  - {name: Crack Magazine,           tier: 2}
+  - {name: BBC Radio 1 Essential Mix,tier: 2}
+  - {name: FACT Magazine podcast,    tier: 2}
+  - {name: Mixmag Lab,               tier: 3}
+  - {name: Beatport Leftfield Charts,tier: 3}
+
+benchmark_artists:
+  "A+":
+    - Ben UFO
+    - Pangaea
+    - Actress
+    - Can Yücel
+    - Objekt
+  "A":
+    - Shackleton
+    - Mumdance
+    - Pearson Sound
+    - Laksa
+    - Nkisi
+    - Loraine James
+  "B":
+    - Timedance artists
+    - Klein
+    - Dj Stingray
+    - Nochexxx
+    - Tygapaw
+
+# Note: populate suggested_benchmark_artists by running:
+#   cd v2-scraper && make all && python build_frameworks.py --framework leftfield_house_techno --update-yamls

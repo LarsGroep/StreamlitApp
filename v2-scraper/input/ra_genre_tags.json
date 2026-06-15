@@ -1,0 +1,12 @@
+[
+  {"ra_genre": "techhouse",       "framework": "tech_house",             "label": "Tech House"},
+  {"ra_genre": "house",           "framework": "tech_house",             "label": "House"},
+  {"ra_genre": "deephouse",       "framework": "tech_house",             "label": "Deep House"},
+  {"ra_genre": "progressivehouse","framework": "melodic",                "label": "Progressive House"},
+  {"ra_genre": "techno",          "framework": "progressive_techno",     "label": "Techno"},
+  {"ra_genre": "industrial",      "framework": "new_school_techno",      "label": "Industrial Techno"},
+  {"ra_genre": "afrohouse",       "framework": "afro_house",             "label": "Afro House"},
+  {"ra_genre": "trance",          "framework": "bounce_trance_ukg",      "label": "Trance"},
+  {"ra_genre": "garage",          "framework": "bounce_trance_ukg",      "label": "UK Garage"},
+  {"ra_genre": "downtempo",       "framework": "melodic",                "label": "Downtempo / Organic"}
+]

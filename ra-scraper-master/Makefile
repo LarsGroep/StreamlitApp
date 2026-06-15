@@ -1,26 +1,41 @@
 all: build notify
 
-.PHONY: all clean process notify
+.PHONY: all clean ra partyflock events festivals build discover process notify
 
 module = scraper
 object = jsonl
 
 clean:
-	# Removing results file
 	rm -rf $(module)/*.$(object)
 
-build: clean
-	# Checking bot
-	#cd $(module) && scrapy check ra_artist_spider
-	# Producing results file
+ra:
 	cd $(module) && scrapy crawl ra_artist_spider
-	#@echo "Data written to .$(object)-files in $(PWD)/$(module)"
 
-process: build
-	# Processing data
+partyflock:
+	cd $(module) && scrapy crawl partyflock_spider
+
+events:
+	cd $(module) && scrapy crawl partyflock_event_spider
+
+festivals:
+	cd $(module) && scrapy crawl festival_spider
+
+discover:
+	cd $(module) && python discover_artists.py
+
+lastfm:
+	cd $(module)/lastfm && python lastfm_scraper.py
+
+scrape-missing:
+	cd $(module) && python scrape_missing_partyflock.py
+
+# WARNING: 'build' wipes all JSONL before re-scraping. Use 'scrape-missing' to append only gaps.
+build: clean ra partyflock events festivals
+
+process: build discover lastfm
+	cd $(module) && python export_to_excel.py
 
 notify: process
-	# Sending notifications
 	cd $(module) && python3 notifications.py
 
 

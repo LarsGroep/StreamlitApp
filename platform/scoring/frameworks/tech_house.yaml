@@ -1,0 +1,90 @@
+name: tech_house
+genre: Tech-House / House
+
+# --- Festivals ---
+festivals:
+  - {name: Circoloco,           tier: "A+"}
+  - {name: Music On,            tier: "A+"}
+  - {name: DC10 Ibiza,          tier: "A+"}
+  - {name: Hï Ibiza,            tier: "A+"}
+  - {name: Solid Grooves,       tier: "A+"}
+  - {name: Paradise,            tier: "A+"}
+  - {name: PIV,                 tier: "A"}
+  - {name: ANTS,                tier: "A"}
+  - {name: Elrow,               tier: "A"}
+  - {name: Music On,            tier: "A"}
+  - {name: Kappa FuturFestival, tier: "A"}
+  - {name: Sunwaves,            tier: "A"}
+
+# --- Labels ---
+labels:
+  - {name: Solid Grooves Records,    tier: "A+"}
+  - {name: PIV Records,              tier: "A+"}
+  - {name: Up The Stuss,             tier: "A+"}
+  - {name: Hot Creations,            tier: "A+"}
+  - {name: Cuttin Headz,             tier: "A+"}
+  - {name: Revival New York,         tier: "A"}
+  - {name: No Art,                   tier: "A"}
+  - {name: Eastenderz,               tier: "A"}
+  - {name: Heavy House Society,      tier: "A"}
+  - {name: Cecille Records,          tier: "A"}
+  - {name: CircoLoco Records,        tier: "A"}
+
+# --- Agencies (score: A+=10, A=8, B=6) ---
+agencies:
+  - {name: The Team,              tier: "A+", score: 10}
+  - {name: WME,                   tier: "A+", score: 10}
+  - {name: CAA,                   tier: "A+", score: 10}
+  - {name: Prime Culture,         tier: "A+", score: 10}
+  - {name: Luma Agency,           tier: "A+", score: 10}
+  - {name: Peoples Agency,        tier: "A",  score: 8}
+  - {name: David Lewis Agency,    tier: "A",  score: 8}
+  - {name: Future Artists Agency, tier: "A",  score: 8}
+  - {name: NGE Booking,           tier: "A",  score: 8}
+  - {name: Liaison Artists,       tier: "A",  score: 8}
+  - {name: Earth Agency,          tier: "A",  score: 8}
+  - {name: Platform Artist,       tier: "A",  score: 8}
+  - {name: LittleBig Agency,      tier: "A",  score: 8}
+  - {name: Meanwhile,             tier: "B",  score: 6}
+  - {name: MN2S,                  tier: "B",  score: 6}
+
+# --- Media / Podcasts ---
+media:
+  - {name: RA Exchange,         tier: 1}
+  - {name: RA Podcast,          tier: 1}
+  - {name: Boiler Room,         tier: 1}
+  - {name: BBC Radio 1 Dance,   tier: 2}
+  - {name: Solid Grooves Radio, tier: 2}
+  - {name: Up The Stuss,        tier: 2}
+  - {name: Circoloco Radio,     tier: 2}
+  - {name: Mixmag Lab,          tier: 3}
+  - {name: PIV Podcast,         tier: 3}
+  - {name: Beatport House Charts,   tier: 3}
+  - {name: Spotify Mint,            tier: 3}
+  - {name: Spotify Housewerk,       tier: 3}
+  - {name: SoundCloud House Charts, tier: 3}
+
+# --- Benchmark Artists ---
+benchmark_artists:
+  "A+":
+    - Chris Stussy
+    - PAWSA
+    - The Martinez Brothers
+    - Marco Carola
+    - Mau P
+  "A":
+    - East End Dubs
+    - Josh Baker
+    - Rossi.
+    - Kolter
+    - Dennis Cruz
+    - Jamback
+  "B":
+    - Toman
+    - Julian Fijma
+    - M-High
+    - Locklead
+    - Luuk van Dijk
+    - Marsolo
+    - LP Rhythm
+    - Sidney Charles

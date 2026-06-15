@@ -1,0 +1,15 @@
+[
+  {"name": "Solid Grooves Records", "slug": "solid-grooves-records", "framework": "tech_house", "tier": "A+"},
+  {"name": "PIV Records",           "slug": "piv-records",           "framework": "tech_house", "tier": "A+"},
+  {"name": "Hot Creations",         "slug": "hot-creations",         "framework": "tech_house", "tier": "A+"},
+  {"name": "Cuttin Headz",          "slug": "cuttin-headz",          "framework": "tech_house", "tier": "A+"},
+  {"name": "Eastenderz",            "slug": "eastenderz",            "framework": "tech_house", "tier": "A"},
+  {"name": "Cecille Records",       "slug": "cecille-records",       "framework": "tech_house", "tier": "A"},
+  {"name": "Afterlife",             "slug": "afterlife",             "framework": "melodic",    "tier": "A+"},
+  {"name": "Diynamic Music",        "slug": "diynamic-music",        "framework": "melodic",    "tier": "A+"},
+  {"name": "Innervisions",          "slug": "innervisions",          "framework": "melodic",    "tier": "A+"},
+  {"name": "Drumcode",              "slug": "drumcode",              "framework": "progressive_techno", "tier": "A+"},
+  {"name": "Tronic",                "slug": "tronic",                "framework": "progressive_techno", "tier": "A+"},
+  {"name": "Fabric Records",        "slug": "fabric-records",        "framework": "leftfield_house_techno", "tier": "A+"},
+  {"name": "Rekids",                "slug": "rekids",                "framework": "leftfield_house_techno", "tier": "A+"}
+]

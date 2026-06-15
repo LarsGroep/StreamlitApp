@@ -1,0 +1,46 @@
+LOFI SCOUT - Artist Discovery & Labeling App
+=============================================
+
+CONCEPT
+-------
+Tinder-style web app for labeling artists as "Lofi vibe" or "not Lofi vibe".
+Creates labeled training data to improve the Isolation Forest anomaly detection model.
+
+RECOMMENDED STACK
+-----------------
+- Folder: lofi-scout/
+- Backend: FastAPI (Python, consistent with existing stack)
+- Frontend: Single-page HTML + vanilla JS (no build tooling)
+- Storage: SQLite (swipe decisions + session tracking)
+- Data sources: features.csv, PartyflockArtistItem.jsonl, LastFMSnapshot.jsonl, Chartmetric API
+
+ARTIST CARD CONTENTS
+--------------------
+- Artist name + photo (Chartmetric)
+- Last.fm: listeners, playcount, top tags, similar artists
+- Partyflock: fans, genres, past/upcoming performances
+- Chartmetric: Spotify followers, playlist reach, chart positions
+- Co-appearance score with known Lofi seed artists
+
+SWIPE LOGIC
+-----------
+- Swipe right / press →  =  "Lofi vibe"      → label 1
+- Swipe left  / press ←  =  "not Lofi vibe"  → label 0
+- Swipe up    / press ↑  =  "maybe / unsure" → label -1 (skip for now)
+
+OUTPUT
+------
+- SQLite DB: decisions table (artist, label, reviewer, timestamp)
+- Export: labeled_artists.csv → feeds Isolation Forest training
+
+OPEN QUESTIONS (pending user input)
+------------------------------------
+1. Chartmetric API credentials — add now or stub for later?
+2. Single user (local) or multi-user (multiple reviewers with names)?
+
+EXISTING SCRAPER DATA LOCATION
+-------------------------------
+- ra-scraper-master/scraper/features.csv               (full feature matrix, 984 artists)
+- ra-scraper-master/scraper/lastfm/LastFMSnapshot.jsonl
+- ra-scraper-master/scraper/PartyflockArtistItem.jsonl
+- ra-scraper-master/scraper/artists.txt                (775 seed + similar artists)

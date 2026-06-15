@@ -1,0 +1,22 @@
+[
+  {
+    "username": "fabric",
+    "show_name": "fabric London",
+    "framework": "leftfield_house_techno"
+  },
+  {
+    "username": "awakenings",
+    "show_name": "Awakenings Podcast",
+    "framework": "progressive_techno"
+  },
+  {
+    "username": "AFTERLIFE",
+    "show_name": "Afterlife Podcast",
+    "framework": "melodic"
+  },
+  {
+    "username": "cerclemusic",
+    "show_name": "Cercle",
+    "framework": "melodic"
+  }
+]

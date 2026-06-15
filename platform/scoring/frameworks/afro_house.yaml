@@ -1,0 +1,71 @@
+name: afro_house
+genre: Afro House / Afrotech / Afro Soul
+
+festivals:
+  - {name: We Are FSTVL,        tier: "A+"}
+  - {name: Sónar Barcelona,     tier: "A+"}
+  - {name: Defected Croatia,    tier: "A+"}
+  - {name: BPM Festival,        tier: "A+"}
+  - {name: ADE (Amsterdam),     tier: "A"}
+  - {name: AfrikaBurn,          tier: "A"}
+  - {name: Joburg Art Fair (DJ stages), tier: "A"}
+  - {name: Ultra South Africa,  tier: "A"}
+  - {name: Rands Drift,         tier: "A"}
+  - {name: DGTL Amsterdam,      tier: "A"}
+
+labels:
+  - {name: Soulistic Music,         tier: "A+"}
+  - {name: Offering Recordings,     tier: "A+"}
+  - {name: Atjazz Record Company,   tier: "A+"}
+  - {name: Nulu Music,              tier: "A"}
+  - {name: Musical Freedom (Afro),  tier: "A"}
+  - {name: Afroterraneo Music,      tier: "A"}
+  - {name: Shona SA,                tier: "A"}
+  - {name: Defected Records (Afro), tier: "B"}
+  - {name: Yoruba Records,          tier: "B"}
+  - {name: King Street Sounds,      tier: "B"}
+
+agencies:
+  - {name: WME,              tier: "A+", score: 10}
+  - {name: CAA,              tier: "A+", score: 10}
+  - {name: Coda Agency,      tier: "A",  score: 8}
+  - {name: Prime Culture,    tier: "A",  score: 8}
+  - {name: Danse Noire,      tier: "A",  score: 8}
+  - {name: Deeper Shades,    tier: "B",  score: 6}
+  - {name: Underground Talent, tier: "B", score: 6}
+
+media:
+  - {name: Boiler Room Africa,         tier: 1}
+  - {name: RA Exchange,                tier: 1}
+  - {name: Soulistic Podcast,          tier: 2}
+  - {name: Offering Podcast,           tier: 2}
+  - {name: Deeper Shades of House,     tier: 2}
+  - {name: BBC Radio 1 Dance (Global), tier: 2}
+  - {name: Mixmag Lab (Africa ed.),    tier: 3}
+  - {name: Beatport Afro House Charts, tier: 3}
+  - {name: Spotify African Heat,       tier: 3}
+  - {name: Spotify AFRO,               tier: 3}
+
+benchmark_artists:
+  "A+":
+    - Black Coffee
+    - Enoo Napa
+    - Themba
+    - Culoe De Song
+    - Louie Vega
+  "A":
+    - Manoo
+    - Christos Fourkis
+    - Djeff
+    - Atjazz
+    - Nnamdi
+    - Herd & Fitz
+  "B":
+    - Caiiro
+    - Kabza De Small
+    - Felix Laband
+    - Black Motion
+    - Bucie
+
+# Note: populate suggested_benchmark_artists by running:
+#   cd v2-scraper && make all && python build_frameworks.py --framework afro_house --update-yamls

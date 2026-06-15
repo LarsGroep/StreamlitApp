@@ -1,0 +1,222 @@
+LOFI ARTIST INTELLIGENCE PLATFORM
+Product Vision & Development Brief
+Received: 2026-06-12
+=============================================
+
+EXECUTIVE SUMMARY
+The platform is a proprietary intelligence system — NOT a database.
+Combines: Data Intelligence, Human Intelligence, Scene Intelligence, Market Intelligence, Booking Intelligence.
+Ultimate objective: identify future opportunities before they become obvious to the broader market.
+
+TWO KEY QUESTIONS THE PLATFORM ANSWERS
+1. Who should we be paying attention to?
+2. Can this artist actually sell tickets?
+
+ARTIST SCOPE
+- Emerging: detect 6-18 months before wider market, future headliners, breakout potential
+- Established: evaluate demand, ticket-selling potential Amsterdam, momentum, fee justification
+
+=============================================================================
+PRIORITY 1A — CORRECT DATA FROM API AND OTHER SOURCES FOR ML MODELS
+=============================================================================
+
+Data Sources to integrate:
+  Spotify, SoundCloud, Instagram, TikTok, YouTube
+  Resident Advisor, Beatport
+  Festival lineups, Club lineups
+  Labels, Playlist placements, Event announcements
+
+Track:
+  AUDIENCE METRICS: monthly listeners, followers, follower growth, engagement growth, geo growth
+  ARTIST DEVELOPMENT: release performance, label associations, booking frequency, festival appearances,
+                      headline appearances, support slots for larger artists
+  INDUSTRY METRICS: follows/mentions from influential artists/promoters, label support,
+                    festival support, agency representation
+
+Goal: Single source of truth, clean historical datasets, data quality before model training
+
+=============================================================================
+PRIORITY 1B — AGENT INTELLIGENCE LAYER
+=============================================================================
+
+Output per artist:
+  - Momentum Score
+  - Growth Score
+  - Market Relevance Score
+  - Future Potential Score
+  - Confidence Score
+
+=============================================================================
+PRIORITY 1C — GRADIENT BOOSTING ML MODEL (replace/augment Isolation Forest)
+=============================================================================
+
+Emerging artists predict:
+  - Future growth potential
+  - Breakout probability
+  - Future headliner potential
+  - Future booking demand
+  - Future market value
+
+Established artists predict:
+  - Ticket-selling potential
+  - Audience demand
+  - Market momentum / growth vs decline
+  - Future relevance
+  - Resonance with LOFI audience
+
+KEY PRINCIPLE: Growth acceleration > current size.
+A smaller artist growing rapidly is more valuable than a larger stagnant artist.
+
+=============================================================================
+PRIORITY 2A — HUMAN FEEDBACK LOOP (ML updatable over time)
+=============================================================================
+
+Booking team can:
+  - Track specific artists
+  - Adjust momentum scores
+  - Add qualitative feedback (buzz, crowd response, industry discussion, upcoming releases)
+  - Compare emerging vs established within same sound
+  - Define which metrics matter per genre
+
+Qualitative feedback examples:
+  - Big release coming up
+  - Strong industry buzz
+  - Strong crowd response during support slots
+  - Stage was already full during opening set
+  - Artist is being discussed heavily within the scene
+
+Feedback categories:
+  - Fits LOFI
+  - Doesn't Fit LOFI
+  - Sound We Would Like To Develop
+  - Already Saturated
+  - Interesting Support Act
+  - Potential Future Headliner
+
+=============================================================================
+PRIORITY 2B — SOUND-SPECIFIC SCOUTING FRAMEWORKS
+=============================================================================
+
+First framework defined: TECH-HOUSE / HOUSE
+
+Relevant Shows/Festivals:
+  Solid Grooves, Paradise, Elrow, Music On, ANTS, PIV, Circoloco, Sunwaves,
+  Kappa FuturFestival, Hï Ibiza, DC10 Ibiza
+
+Relevant Media: RA, Mixmag, DJ Mag, Beatportal, Ibiza Spotlight
+
+Relevant Labels:
+  Solid Grooves Records, PIV Records, Up The Stuss, Hot Creations, Cuttin Headz,
+  Revival New York, No Art, Eastenderz, Heavy House Society, Cecille Records, CircoLoco Records
+
+Relevant Podcasts/Streaming (Tier 1-3):
+  T1: RA Exchange/Podcast, Boiler Room
+  T2: BBC Radio 1 Dance, Solid Grooves Radio, Up The Stuss, Circoloco Radio
+  T3: Mixmag Lab, PIV Podcast, Beatport House Charts, Spotify Mint, Spotify Housewerk, SC House Charts
+
+Benchmark Artists:
+  Tier A+: Chris Stussy, PAWSA, The Martinez Brothers, Marco Carola, Mau P
+  Tier A:  East End Dubs, Josh Baker, Rossi., Kolter, Dennis Cruz, Jamback
+  Tier B:  Toman, M-High, Locklead, Luuk van Dijk, Marsolo, LP Rhythm, Sidney Charles
+
+Genre-Specific Scores:
+  Ecosystem Score, Ibiza Score, Industry Support Score, Agency Validation Score,
+  Booking Momentum Score, Chart Performance Score, Label Validation Score,
+  Podcast Validation Score, LOFI Fit Score
+
+AGENCY VALIDATION SCORE
+  Tier A+ (score 10): The Team, WME, CAA, Prime Culture, Luma Agency
+  Tier A  (score 8):  Peoples Agency, David Lewis Agency, Future Artists Agency,
+                      NGE Booking, Liaison Artists, Earth Agency, Platform Artist, LittleBig Agency
+  Tier B  (score 6):  Meanwhile, MN2S, boutique/regional agencies
+
+  Agency Growth Signals: Independent → Tier B → Tier A → Tier A+
+  Additional: shared agency with benchmark artists
+  Alarm Triggers: first professional agency, first tier upgrade, shared agency with benchmark
+
+VALIDATION EVENTS (milestones to track):
+  First Boiler Room, First RA Podcast, First BBC Radio 1, First Ibiza booking,
+  First Circoloco, First Music On, First ANTS, First PIV,
+  First Extended Set, First All Night Long, First All Day Long,
+  First Major Residency, First Multi-City Headline Tour,
+  First Tier A Support Slot, First Tier A B2B,
+  First Beatport Top 10, First Beatport #1,
+  First headline 1k/2k/5k capacity
+
+Future frameworks to define:
+  Leftfield House & Techno, Progressive Techno, Bounce/Trance/UKG,
+  Melodic, New School Techno, Afro House + additional genres
+
+=============================================================================
+PRIORITY 2C — ONLINE WEBSITE INTERFACE
+=============================================================================
+
+Features:
+  Artist profile pages, growth timeline, momentum dashboard, trend alerts dashboard,
+  human feedback interface, search, advanced filtering, artist comparison, territory insights
+
+Artist profile shows:
+  Growth history, momentum score, booking history, festival history,
+  label affiliations, agency affiliations, geographic growth,
+  LOFI feedback history, similar artists, historical predictions vs actuals
+
+=============================================================================
+PRIORITY 3 — TREND RADAR / ANOMALY DETECTOR
+=============================================================================
+
+Detect:
+  Sudden growth spikes, breakout tracks, new festival support,
+  rapid regional growth, unexpected engagement increases,
+  support from influential DJs/labels/festivals
+
+Market-level trend detection:
+  Emerging/declining genres, regional popularity shifts, emerging local scenes
+
+Output alerts:
+  "Pay attention to this artist now", "Potential breakout artist",
+  "Momentum accelerating", "Genre trend emerging/declining"
+
+=============================================================================
+PRIORITY 4 — LINK ML MODEL TO LOFI INTERNAL DATA
+=============================================================================
+
+Integrate:
+  Historical ticket sales, capacity performance, sell-out rates,
+  event profitability, audience demographics, genre performance
+
+Questions model should answer:
+  Can this artist sell tickets in Amsterdam?
+  Do we already have the audience for this artist?
+  Is demand increasing or decreasing?
+  Is the artist worth the requested fee?
+  Which artists are undervalued/overvalued?
+  Which artists are future headliners?
+  Which sounds are over/underperforming?
+
+=============================================================================
+LONG-TERM VISION
+=============================================================================
+
+Artist Intelligence + Sound Intelligence + Market Intelligence + Booking Intelligence
+
+SUCCESS METRIC:
+If the platform helps LOFI discover and book the next Chris Stussy, Josh Baker,
+Kolter, Rossi., Mau P or PAWSA before the rest of the market — it is succeeding.
+
+=============================================================================
+WHAT WE HAVE BUILT SO FAR (scraper foundation)
+=============================================================================
+
+- Partyflock spider: 687 artist profiles (fans, genres, past/upcoming performances)
+- Partyflock event spider: full event archive with lineups, dates, venues, geo (last 4 years)
+- RA spider: upcoming events per artist
+- Last.fm scraper: 993 artists, time-series snapshots (listeners, playcount, tags, similar)
+- discover_artists.py: co-appearance analysis → similar artist discovery
+- build_features.py: feature matrix (984 artists × 36 columns)
+- export_to_excel.py: multi-sheet Excel export
+
+OPEN QUESTIONS
+--------------
+1. Chartmetric API credentials — covers Spotify/Instagram/TikTok/YouTube in one API
+2. Single reviewer or multi-user (multiple booking team members)?
+3. Internal ticket sales data format — how is it stored currently?

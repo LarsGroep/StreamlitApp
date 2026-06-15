@@ -12,7 +12,7 @@ log = get_logger(__name__)
 
 def get_artists(filename):
     try:
-        with open(os.path.join(PROJECT_ROOT, filename), "r") as file:
+        with open(os.path.join(PROJECT_ROOT, filename), "r", encoding="utf-8") as file:
             lines = [line.strip() for line in file.readlines()]
         log.info("File %s read and artists %s extracted", filename, lines)
         return lines

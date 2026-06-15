@@ -1,0 +1,74 @@
+name: melodic
+genre: Melodic House & Techno / Progressive House
+
+festivals:
+  - {name: Afterlife Festival,         tier: "A+"}
+  - {name: Cercle,                     tier: "A+"}
+  - {name: Diynamic Outdoor,           tier: "A+"}
+  - {name: Junction 2,                 tier: "A"}
+  - {name: Dekmantel,                  tier: "A"}
+  - {name: Melt! Festival,             tier: "A"}
+  - {name: Burning Man (deep stages),  tier: "A"}
+  - {name: Tomorrowland (Atmosphere),  tier: "A"}
+  - {name: Time Warp,                  tier: "A"}
+  - {name: Sunwaves,                   tier: "A"}
+  - {name: ADE (Shelter / Paradiso),   tier: "A"}
+
+labels:
+  - {name: Afterlife,             tier: "A+"}
+  - {name: Diynamic Music,        tier: "A+"}
+  - {name: Innervisions,          tier: "A+"}
+  - {name: Life and Death,        tier: "A"}
+  - {name: Kompakt,               tier: "A"}
+  - {name: Different Recordings,  tier: "A"}
+  - {name: Watergate Records,     tier: "A"}
+  - {name: Get Physical Music,    tier: "B"}
+  - {name: Connaisseur Recordings,tier: "B"}
+
+agencies:
+  - {name: The Team,        tier: "A+", score: 10}
+  - {name: WME,             tier: "A+", score: 10}
+  - {name: Afterlife Mgmt,  tier: "A+", score: 10}
+  - {name: CAA,             tier: "A+", score: 10}
+  - {name: Coda Agency,     tier: "A",  score: 8}
+  - {name: United Talent Agency, tier: "A", score: 8}
+  - {name: Paradigm Agency, tier: "A",  score: 8}
+  - {name: Melt Booking,    tier: "B",  score: 6}
+  - {name: Suara Artists,   tier: "B",  score: 6}
+
+media:
+  - {name: Cercle (YouTube),       tier: 1}
+  - {name: Boiler Room,            tier: 1}
+  - {name: RA Exchange,            tier: 1}
+  - {name: Afterlife Podcast,      tier: 2}
+  - {name: Diynamic Podcast,       tier: 2}
+  - {name: BBC Radio 1 Dance,      tier: 2}
+  - {name: ARTE Concert,           tier: 2}
+  - {name: Mixmag Lab,             tier: 3}
+  - {name: Spotify Ripple,         tier: 3}
+  - {name: Spotify Ethereal House, tier: 3}
+  - {name: Beatport Melodic House & Techno Charts, tier: 3}
+
+benchmark_artists:
+  "A+":
+    - Tale Of Us
+    - Anyma
+    - Massano
+    - Stephan Bodzin
+    - Jon Hopkins
+  "A":
+    - Mathame
+    - Innellea
+    - Fideles
+    - Patrice Bäumel
+    - Jan Blomqvist
+    - Rampue
+  "B":
+    - Musumeci
+    - Âme
+    - Mind Against
+    - Monolink
+    - Kiasmos
+
+# Note: populate suggested_benchmark_artists by running:
+#   cd v2-scraper && make all && python build_frameworks.py --framework melodic --update-yamls

@@ -1,0 +1,13 @@
+[
+  {"name": "Life and Death",        "slug": "life-and-death",        "id": 30286,  "framework": "melodic",                "tier": "A"},
+  {"name": "Horizontal Ground",     "slug": "horizontal-ground",     "id": 62082,  "framework": "new_school_techno",       "tier": "A"},
+  {"name": "Soulistic Music",       "slug": "soulistic-music",       "id": 98764,  "framework": "afro_house",              "tier": "A+"},
+  {"name": "Offering Recordings",   "slug": "offering-recordings",   "id": 105011, "framework": "afro_house",              "tier": "A"},
+  {"name": "Atjazz Record Company", "slug": "atjazz-record-company", "id": 42571,  "framework": "afro_house",              "tier": "A"},
+  {"name": "Fabric Records",        "slug": "fabric-records",        "id": 1003,   "framework": "leftfield_house_techno",  "tier": "A+"},
+  {"name": "Rekids",                "slug": "rekids",                "id": 14897,  "framework": "leftfield_house_techno",  "tier": "A+"},
+  {"name": "Numbers",               "slug": "numbers",               "id": 26478,  "framework": "leftfield_house_techno",  "tier": "A"},
+  {"name": "Hemlock Recordings",    "slug": "hemlock-recordings",    "id": 32640,  "framework": "leftfield_house_techno",  "tier": "A"},
+  {"name": "Toolroom",              "slug": "toolroom",              "id": 11897,  "framework": "bounce_trance_ukg",       "tier": "A+"},
+  {"name": "Magnetic Island",       "slug": "magnetic-island",       "id": 95423,  "framework": "bounce_trance_ukg",       "tier": "A"}
+]

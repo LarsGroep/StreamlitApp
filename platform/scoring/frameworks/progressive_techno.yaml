@@ -1,0 +1,73 @@
+name: progressive_techno
+genre: Progressive Techno / Peak Time Driving Techno
+
+festivals:
+  - {name: Awakenings,               tier: "A+"}
+  - {name: Time Warp,                tier: "A+"}
+  - {name: Drumcode Festival,        tier: "A+"}
+  - {name: fabric London,            tier: "A+"}
+  - {name: Rex Club Paris,           tier: "A+"}
+  - {name: Tresor Berlin,            tier: "A"}
+  - {name: Berghain / Panorama Bar,  tier: "A"}
+  - {name: Dour Festival,            tier: "A"}
+  - {name: Extrema Outdoor,          tier: "A"}
+  - {name: Movement Detroit,         tier: "A"}
+  - {name: Junction 2,               tier: "A"}
+  - {name: ADE (Gashouder),          tier: "A"}
+
+labels:
+  - {name: Drumcode,            tier: "A+"}
+  - {name: Tronic,              tier: "A+"}
+  - {name: Soma Records,        tier: "A+"}
+  - {name: Second State,        tier: "A"}
+  - {name: Mote-Evolver,        tier: "A"}
+  - {name: Token Records,       tier: "A"}
+  - {name: Speicher (Kompakt),  tier: "A"}
+  - {name: Sleaze Records,      tier: "B"}
+  - {name: Lose Control Music,  tier: "B"}
+
+agencies:
+  - {name: WME,              tier: "A+", score: 10}
+  - {name: CAA,              tier: "A+", score: 10}
+  - {name: The Team,         tier: "A+", score: 10}
+  - {name: Coda Agency,      tier: "A",  score: 8}
+  - {name: Earth Agency,     tier: "A",  score: 8}
+  - {name: Drumcode Booking, tier: "A",  score: 8}
+  - {name: MN2S,             tier: "B",  score: 6}
+  - {name: Meanwhile,        tier: "B",  score: 6}
+
+media:
+  - {name: RA Exchange,             tier: 1}
+  - {name: Boiler Room,             tier: 1}
+  - {name: Drumcode Live (Mixcloud),tier: 2}
+  - {name: Awakenings Podcast,      tier: 2}
+  - {name: BBC Radio 1 Dance,       tier: 2}
+  - {name: DGTL Podcast,            tier: 2}
+  - {name: Fabric Mix Series,       tier: 2}
+  - {name: Mixmag Lab,              tier: 3}
+  - {name: Beatport Techno Charts,  tier: 3}
+  - {name: Spotify Techno Bunker,   tier: 3}
+
+benchmark_artists:
+  "A+":
+    - Adam Beyer
+    - Amelie Lens
+    - Charlotte de Witte
+    - Joseph Capriati
+    - Chris Liebing
+  "A":
+    - SPFDJ
+    - Alignment
+    - Rebekah
+    - Enrico Sangiuliano
+    - Lilly Palmer
+    - Alan Fitzpatrick
+  "B":
+    - Alignment (emerging)
+    - Sara Landry
+    - SPFDJ (pre-breakout)
+    - JASSS
+    - Dax J
+
+# Note: populate suggested_benchmark_artists by running:
+#   cd v2-scraper && make all && python build_frameworks.py --framework progressive_techno --update-yamls

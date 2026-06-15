@@ -1,0 +1,71 @@
+name: bounce_trance_ukg
+genre: Bounce / Trance / UK Garage / UKG
+
+festivals:
+  - {name: Creamfields,         tier: "A+"}
+  - {name: Tomorrowland,        tier: "A+"}
+  - {name: A State of Trance (ASOT), tier: "A+"}
+  - {name: Garage Nation,       tier: "A+"}
+  - {name: We Love Space Ibiza, tier: "A"}
+  - {name: Ministry of Sound,   tier: "A"}
+  - {name: Godskitchen,         tier: "A"}
+  - {name: Dreamstate,          tier: "A"}
+  - {name: E1 London,           tier: "A"}
+  - {name: Fabric (UKG nights), tier: "A"}
+  - {name: SW4 (South West Four),tier: "B"}
+
+labels:
+  - {name: Toolroom,             tier: "A+"}
+  - {name: Magnetic Island,      tier: "A+"}
+  - {name: Armada Music,         tier: "A+"}
+  - {name: Anjunabeats,          tier: "A+"}
+  - {name: Rinse Recordings,     tier: "A"}
+  - {name: PMR Records,          tier: "A"}
+  - {name: Island Records (UKG), tier: "A"}
+  - {name: Big Love Records,     tier: "A"}
+  - {name: Defected Records,     tier: "B"}
+  - {name: Data Records,         tier: "B"}
+
+agencies:
+  - {name: WME,              tier: "A+", score: 10}
+  - {name: CAA,              tier: "A+", score: 10}
+  - {name: Coda Agency,      tier: "A",  score: 8}
+  - {name: Ariel Publicity,  tier: "A",  score: 8}
+  - {name: MN2S,             tier: "B",  score: 6}
+  - {name: Liaison Artists,  tier: "B",  score: 6}
+
+media:
+  - {name: ASOT (A State Of Trance), tier: 1}
+  - {name: BBC Radio 1 Dance,        tier: 1}
+  - {name: Garage Nation Radio,      tier: 2}
+  - {name: Toolroom Radio,           tier: 2}
+  - {name: Kiss FM Dance,            tier: 2}
+  - {name: Rinse FM,                 tier: 2}
+  - {name: Mixmag Lab,               tier: 3}
+  - {name: Beatport Trance Charts,   tier: 3}
+  - {name: Beatport UK Garage Charts,tier: 3}
+  - {name: Spotify Trance (State of Flow), tier: 3}
+
+benchmark_artists:
+  "A+":
+    - Armin van Buuren
+    - Ferry Corsten
+    - Sonny Fodera
+    - Todd Edwards
+    - Craig David
+  "A":
+    - Riton
+    - Skream
+    - Artwork
+    - MJ Cole
+    - Conducta
+    - Mall Grab
+  "B":
+    - Shy FX
+    - Sammy Porter
+    - Sunstars
+    - Krysko
+    - Notion
+
+# Note: populate suggested_benchmark_artists by running:
+#   cd v2-scraper && make all && python build_frameworks.py --framework bounce_trance_ukg --update-yamls

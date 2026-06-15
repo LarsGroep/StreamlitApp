@@ -4,3 +4,22 @@ __pycache__/
 .env
 *.rar
 ~$*
+
+# lofi-tinder has its own git repo — exclude from this parent repo
+lofi-tinder/
+
+# Binaries and installers
+*.exe
+
+# Excel / data exports
+*.xlsx
+*.xls
+
+# Scraped data output (committed as source data, not re-generated exports)
+ra-scraper-master/scraper/features.csv
+ra-scraper-master/scraper/lastfm/features.csv
+ra-scraper-master/scraper/lofi_events_raw.tsv
+ra-scraper-master/scraper/spotify/
+
+# Claude local settings
+.claude/settings.local.json

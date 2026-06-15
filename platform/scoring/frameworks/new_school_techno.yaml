@@ -1,0 +1,69 @@
+name: new_school_techno
+genre: New School Techno / Hypnotic / Raw / Leftfield Techno
+
+festivals:
+  - {name: Berghain / Panorama Bar,  tier: "A+"}
+  - {name: fabric London,            tier: "A+"}
+  - {name: De School Amsterdam,      tier: "A+"}
+  - {name: OHM Berlin,               tier: "A+"}
+  - {name: Club der Visionaere,      tier: "A"}
+  - {name: Tresor Berlin,            tier: "A"}
+  - {name: Shelter Amsterdam,        tier: "A"}
+  - {name: Dekmantel,                tier: "A"}
+  - {name: CTM Festival,             tier: "A"}
+  - {name: Unsound,                  tier: "A"}
+  - {name: Bloc Weekend,             tier: "A"}
+
+labels:
+  - {name: Repitch Recordings,        tier: "A+"}
+  - {name: Stroboscopic Artefacts,    tier: "A+"}
+  - {name: Horizontal Ground,         tier: "A+"}
+  - {name: Soma Records,              tier: "A"}
+  - {name: Jealous God,               tier: "A"}
+  - {name: Semantica Records,         tier: "A"}
+  - {name: Opal Tapes,                tier: "A"}
+  - {name: Berceuse Heroique,         tier: "B"}
+  - {name: Mord Records,              tier: "B"}
+  - {name: Planet Rhythm,             tier: "B"}
+
+agencies:
+  - {name: Coda Agency,         tier: "A+", score: 10}
+  - {name: Earth Agency,        tier: "A+", score: 10}
+  - {name: WME,                 tier: "A+", score: 10}
+  - {name: Hard Wax Booking,    tier: "A",  score: 8}
+  - {name: Parallax Booking,    tier: "A",  score: 8}
+  - {name: Resin Agency,        tier: "B",  score: 6}
+
+media:
+  - {name: RA Exchange,                tier: 1}
+  - {name: Boiler Room,                tier: 1}
+  - {name: fabric Mix Series,          tier: 2}
+  - {name: NTS Radio,                  tier: 2}
+  - {name: Resonance FM,               tier: 2}
+  - {name: BBC Radio 1 Essential Mix,  tier: 2}
+  - {name: Mixmag Lab,                 tier: 3}
+  - {name: Beatport Techno Raw Charts, tier: 3}
+
+benchmark_artists:
+  "A+":
+    - Paula Temple
+    - Headless Horseman
+    - Surgeon
+    - Blawan
+    - Phase (ø [phase])
+  "A":
+    - rRoxymore
+    - Objekt
+    - Perc
+    - The Hacker
+    - Ancient Methods
+    - Container
+  "B":
+    - Orphx
+    - Varg
+    - Nkisi
+    - Puce Mary
+    - Parris
+
+# Note: populate suggested_benchmark_artists by running:
+#   cd v2-scraper && make all && python build_frameworks.py --framework new_school_techno --update-yamls

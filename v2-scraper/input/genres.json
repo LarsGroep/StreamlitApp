@@ -1,0 +1,15 @@
+[
+  {"name": "Tech House",              "slug": "tech-house",               "id": 11,  "framework": "tech_house"},
+  {"name": "House",                   "slug": "house",                    "id": 5,   "framework": "tech_house"},
+  {"name": "Deep House",              "slug": "deep-house",               "id": 12,  "framework": "tech_house"},
+  {"name": "Melodic House & Techno",  "slug": "melodic-house-techno",     "id": 90,  "framework": "melodic"},
+  {"name": "Progressive House",       "slug": "progressive-house",        "id": 15,  "framework": "melodic"},
+  {"name": "Techno (Peak Time / Driving)", "slug": "techno-peak-time-driving", "id": 6, "framework": "progressive_techno"},
+  {"name": "Techno (Raw / Deep / Hypnotic)", "slug": "techno-raw-deep-hypnotic", "id": 92, "framework": "new_school_techno"},
+  {"name": "Afro House",              "slug": "afro-house",               "id": 89,  "framework": "afro_house"},
+  {"name": "UK Garage / Bassline",    "slug": "uk-garage-bassline",       "id": 86,  "framework": "bounce_trance_ukg"},
+  {"name": "Trance (Main Floor)",     "slug": "trance-main-floor",        "id": 7,   "framework": "bounce_trance_ukg"},
+  {"name": "Progressive Trance",      "slug": "progressive-trance",       "id": 94,  "framework": "bounce_trance_ukg"},
+  {"name": "Leftfield House & Techno","slug": "leftfield-house-techno",   "id": 88,  "framework": "leftfield_house_techno"},
+  {"name": "Organic House / Downtempo","slug": "organic-house-downtempo", "id": 93,  "framework": "melodic"}
+]
